@@ -6,6 +6,16 @@
         东南大学四牌楼校区中心楼
         <span class="iconfont position__notice">&#xe7c4;</span>
       </div>
+      <div class="search">
+        <span class="iconfont">&#xe6e1;</span>
+        <span class="search__text">哈哈哈信你个鬼</span>
+      </div>
+      <div class="banner">
+        <img
+          class="banner__img"
+          src="http://www.dell-lee.com/imgs/vue3/banner.jpg"
+        />
+      </div>
     </div>
     <div class="docker">
       <div class="docker__item docker__item--active">
@@ -57,6 +67,31 @@
     font-size: .2rem;
   }
   color: $content-fontcolor;
+}
+.search {
+  margin-bottom: .12rem;
+  line-height: .32rem;
+  background: #F5F5F5;
+  color: #B7B7B7;
+  border-radius: .16rem;
+  font-size: .14rem;
+  .iconfont {
+    display: inline-block;
+    padding: 0 .08rem 0 .16rem;
+    font-size: .2rem;
+  }
+  &__text {
+    display: inline-block;
+    font-size: .14rem;
+  }
+}
+.banner {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 25.4%;
+  &__img {
+    width: 100%;
+  }
 }
 .docker {
   display: flex;
