@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '../../style/virables.scss';
 @import '../../style/mixins.scss';
 .position {

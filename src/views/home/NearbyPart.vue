@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'NearBy',
+  name: 'NearbyPart',
   setup () {
     const nearbyList = [{
       id: 0,
@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../style/virables.scss';
 .nearby {
   &__title {
