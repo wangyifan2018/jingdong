@@ -1,11 +1,11 @@
 <template>
-  <HomePage />
+  <!-- <HomePage /> -->
+  <router-view />
 </template>
 
 <script>
-import HomePage from './views/home/HomePage.vue'
 export default {
-  name: 'App',
-  components: { HomePage }
+  name: 'App'
+  /* eslint-disable */
 }
 </script>
