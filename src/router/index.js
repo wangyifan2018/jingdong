@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomePage from '../views/home/HomePage.vue'
 import LoginPage from '../views/login/LoginPage.vue'
+import RegisterPage from '../views/register/RegisterPage.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/login',
     name: 'LoginPage',
     component: LoginPage
+  },
+  {
+    path: '/register',
+    name: 'RegisterPage',
+    component: RegisterPage
   }
   // {
   //   path: '/about',
@@ -29,10 +35,12 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const isLogin = localStorage.isLogin
-  if (!isLogin && to.name !== 'LoginPage') {
+  const { isLogin } = localStorage
+  const { name } = to
+  const isLOginOrRegister = (name === 'LoginPage' || name === 'RegisterPage')
+  if (!isLogin && !isLOginOrRegister) {
     next({ name: 'LoginPage' })
-  } else if (isLogin && to.name === 'LoginPage') {
+  } else if (isLogin && isLOginOrRegister) {
     next({ name: 'HomePage' })
   } else {
     next()
